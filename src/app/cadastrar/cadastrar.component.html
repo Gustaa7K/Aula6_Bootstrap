@@ -1,0 +1,19 @@
+<form #cadastroForm="ngForm" (ngSubmit)="onSubmit(cadastroForm)">
+  <div>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" ngModel required>
+  </div>
+  <div>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" ngModel required minlength="6" maxlength="20">
+  </div>
+  <div>
+    <label for="confirmacao">Confirmação de Senha:</label>
+    <input type="password" id="confirmacao" name="confirmacao" ngModel required minlength="6" maxlength="20">
+  </div>
+  <button type="submit">Enviar</button>
+</form>
+<p *ngIf="mensagem">{{ mensagem }}</p>
+
+
+

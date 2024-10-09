@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+  <div>
+    <label for="usuario">Usuário:</label>
+    <input type="text" id="usuario" name="usuario" ngModel required>
+  </div>
+  <div>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" ngModel required>
+  </div>
+  <button type="submit">Entrar</button>
+  <p *ngIf="mensagem">{{ mensagem }}</p>
+</form>
+
+
+
+
+
+
